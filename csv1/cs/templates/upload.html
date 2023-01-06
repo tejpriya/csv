@@ -1,0 +1,14 @@
+   {% if messages %}
+
+  {% for message in messages %}
+<div class="aret alert-{{message.tags}}"
+ role="alert">
+</div>
+{% endfor%}
+{% endif%}
+<form method="post" enctype="multipart/form-data" type="file" name="persons">
+    {% csrf_token %}
+   
+    <button type="submit">
+        Upload</button>
+  </form>
